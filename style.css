@@ -1,0 +1,478 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f4f8fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0a58ca, #1e90ff);
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Navigation */
+nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #0a58ca;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #e6f0ff;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    color: #0a58ca;
+    margin-bottom: 10px;
+}
+
+section h3, section h4 {
+    margin-top: 20px;
+    color: #1e90ff;
+}
+
+/* --------- Fixed Rating --------- */
+.rating {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+/* Hide radio buttons */
+.rating input {
+    display: none;
+}
+
+/* Rating labels */
+.rating label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background-color: #e6f0ff;
+    color: #0a58ca;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Star icon before each label */
+.rating label::before {
+    content: "★";
+    font-size: 20px;
+    color: #0a58ca;
+}
+
+/* Hover effect */
+.rating label:hover {
+    background-color: #cfe2ff;
+}
+
+/* Selected rating */
+.rating input:checked + label {
+    background-color: #0a58ca;
+    color: white;
+}
+
+.rating input:checked + label::before {
+    color: #ffd700;
+}
+
+/* Back to top button */
+.top-btn {
+    display: inline-block;
+    margin: 20px;
+    text-decoration: none;
+    background-color: #0a58ca;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    position: fixed;
+    right: 20px;
+    bottom: 70px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.top-btn:hover {
+    background-color: #1e90ff;
+}
+
+/* Footer */
+footer {
+    background-color: #0a58ca;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+
+    width: 100%;
+    clear: both;
+    position: static;
+}/* ========== ADD THESE STYLES TO YOUR EXISTING style.css ========== */
+
+/* Flex Container for Cards */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+/* Services Container */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+/* Card Styling */
+.card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #0a58ca;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-top-color: #1e90ff;
+}
+
+.card h3 {
+    color: #0a58ca;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+table th {
+    background: linear-gradient(135deg, #0a58ca, #1e90ff);
+    color: white;
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td {
+    padding: 18px 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+table tr:hover {
+    background-color: #f0f7ff;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Contact Page Styles */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-details {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-intro {
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.contact-list span:first-child {
+    font-size: 1.3em;
+    color: #0a58ca;
+    width: 30px;
+}
+
+.contact-list a {
+    color: #0a58ca;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.contact-list a:hover {
+    color: #1e90ff;
+    text-decoration: underline;
+}
+
+.contact-list span:last-child {
+    color: #555;
+}
+
+/* Contact Form */
+.contact-action {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e1e8f0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #0a58ca;
+    box-shadow: 0 0 0 3px rgba(10, 88, 202, 0.1);
+}
+
+.contact-form button {
+    background: linear-gradient(135deg, #0a58ca, #1e90ff);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #0947a8, #1a7bff);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(10, 88, 202, 0.2);
+}
+
+.contact-footer {
+    text-align: center;
+    margin: 30px 0;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.contact-footer strong {
+    color: #0a58ca;
+}
+
+/* WhatsApp Button Special Styling */
+.whatsapp-btn {
+    background: #25D366;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flex, .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    header h1 {
+        font-size: 22px;
+    }
+    
+    .top-btn {
+        right: 15px;
+        bottom: 15px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Animation for page elements */
+section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced footer */
+footer {
+    background: linear-gradient(135deg, #0a58ca, #1e90ff);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 14px;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #25D366, #1e90ff, #0a58ca);
+}
